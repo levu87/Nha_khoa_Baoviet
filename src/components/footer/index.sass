@@ -1,0 +1,120 @@
+footer 
+    position: relative
+    &:after
+        position: absolute
+        width: 100%
+        height: 100%
+        content: ''
+        display: block
+        background: rgba(#fcfcfc,.93)
+        top: 0
+        left: 0
+        z-index: 3
+    .footer-wrapper
+        padding: 5rem 0
+        position: relative 
+        z-index: 9
+        .row
+            justify-content: space-between
+        nav 
+            list-style: none
+            h3 
+                font-size: 2rem 
+                text-transform: uppercase
+                color: #333333
+                white-space: nowrap
+                margin-bottom: 4rem
+                position: relative
+                &:after 
+                    position: absolute
+                    content: ''
+                    display: block
+                    width: 5rem
+                    height: .2rem 
+                    background: #af1f22
+                    left: 0 
+                    bottom: -.8rem
+            p 
+                color: #666666
+                font-size: 1.6rem
+            .h3--lh
+                font-weight: 500
+            .call 
+                color: #af1f22
+                font-size: 2.8rem 
+                padding: 1rem 0
+                margin-top: 4rem 
+                text-align: center
+                border: 1px solid #af1f22
+                em 
+                    margin-right: 1rem
+            .table
+                width: 100%
+                tr 
+                    padding: 1rem 0
+                    display: flex
+                    color: #666666
+                    td:nth-child(2)
+                        margin-left: auto
+                tr:not(:nth-child(3))
+                    border-bottom: 1px solid #ebebeb
+                tr:nth-child(3)
+                    td:nth-child(2)
+                        background: #af1f22
+                        padding: .5rem 1rem
+                        font-size: 1.4rem
+                        color: #ffffff
+
+            h4 
+                text-transform: uppercase
+                font-size: 1.8rem 
+                color: #333333
+                font-weight: 500
+                padding: 2rem 0 1rem
+            .h4--no-pt
+                padding-top: 0!important
+        .diachi
+            li 
+                .lh 
+                    display: flex
+                    em 
+                        margin-right: 2rem
+                        font-size: 1.6rem
+                        color: #666666
+                    p 
+                        color: #666666
+                        font-size: 1.6rem
+                img 
+                    padding-top: 1rem
+        .social 
+            width: 100%
+            li 
+                padding: 2rem
+                margin-bottom: 1rem
+                background: #ffffff
+                border: 1px solid #ebebeb
+                a 
+                    text-transform: uppercase
+                    font-size: 1.8rem
+                    display: block
+                    position: relative
+                    img
+                        position: absolute
+                        right: 5rem
+                        top: 50%
+                        transform: translateY(-50%)
+                        @media (max-width: 1025px)
+                            right: 0
+            // .list-icon
+            //     @media (max-width: 768px)
+            //         display: flex
+            //         flex-wrap: wrap
+            //         li 
+            //             width: 33.33%
+            //             flex: 0 0 33.33%
+    .copyright
+        background: #af1f22
+        color: #ffffff
+        padding: 2rem 0
+        position: relative
+        z-index: 9
