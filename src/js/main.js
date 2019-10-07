@@ -162,6 +162,62 @@ function swiperInit() {
             crossFade: true
         },
     });
+    var galleryThumbs = new Swiper(
+		".services-thumbs-wrapper .swiper-container",
+		{
+			spaceBetween: 20,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true
+		}
+	);
+	var galleryTop = new Swiper(".services-top-wrapper .swiper-container", {
+		spaceBetween: 10,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		thumbs: {
+			swiper: galleryThumbs,
+			slidesPerView: 4
+        },
+        navigation: {
+            nextEl: '.swiper-btn-next',
+            prevEl: '.swiper-btn-prev',
+        },
+    });
+   
+    var swiper = new Swiper('.services-other .swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+    nextEl: '.sv-other-btn-next',
+    prevEl: '.sv-other-btn-prev',
+    },
+    breakpoints: {
+    320: {
+    slidesPerView: 1,
+    spaceBetween: 10
+    },
+    // when window width is <= 480px
+    480: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+
+    },
+    // when window width is <= 640px
+    768: {
+    slidesPerView: 2,
+    spaceBetween: 30
+    },
+    992: {
+    slidesPerView: 3,
+    spaceBetween: 30
+    }
+    },
+    });
+      
 }
 
 // function ChangeColorSvg() {
@@ -194,6 +250,30 @@ function swiperInit() {
 
 //     });
 // }
+function Accordion() {
+
+    $(".list-question ul .accordion-title p").click(function(e) {
+        e.preventDefault();
+        if (!$(this)
+            .parent()
+            .hasClass("active")
+        ) {
+            $(".list-question ul .accordion-title .accordion-content").slideUp();
+            $(this)
+                .next()
+                .slideToggle();
+            $(".list-question ul .accordion-title").removeClass("active");
+            $(this)
+                .parent()
+                .addClass("active");
+        } else {
+            $(this)
+                .next()
+                .slideToggle();
+            $(".list-question ul .accordion-title").removeClass("active");
+        }
+    });
+}
 $(document).ready(function () {
     swiperInit();
     App.SetBackground()
@@ -206,5 +286,6 @@ $(document).ready(function () {
     Header.SearchBox()
     headerfixed()
     toggleHeader()
+    Accordion()
     // ChangeColorSvg()
 })

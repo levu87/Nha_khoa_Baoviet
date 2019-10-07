@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'hỏi đáp'
+	- var bodyClass = 'hoi-dap-page'
+
+block main
+	include ../components/hoi-dap/banner/index.pug
+	include ../components/hoi-dap/breadcrumb/index.pug
+	include ../components/hoi-dap/hoi-dap/index.pug
+	

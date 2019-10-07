@@ -1,0 +1,40 @@
+.services-wrapper 
+    padding: 5rem 0 
+    background: #ffffff
+    .list-item
+        .item
+            figure 
+                position: relative
+                .img
+                    display: block
+                    height: 26rem
+                    width: auto 
+                    overflow: hidden
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        transition: all .4s ease-in-out
+
+                figcaption 
+                    position: absolute
+                    bottom: 0 
+                    left: 0
+                    width: 100%
+                    text-align: center
+                    background: #0b9444
+                    padding: 1.5rem 0
+                    .title 
+                        width: 100%
+                        font-size: 1.8rem 
+                        color: #ffffff
+                        transition: all .4s ease-in-out
+
+                &:hover 
+                    .img 
+                        img 
+                            transform: scale(1.15)
+                    .title 
+                        font-weight: 600
+
+                    

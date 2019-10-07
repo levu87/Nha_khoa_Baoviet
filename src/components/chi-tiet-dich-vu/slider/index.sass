@@ -1,0 +1,145 @@
+.slider-wrapper 
+    background: #f3faf5
+    padding: 5rem 0
+    .services-top-wrapper
+        .swiper-slide
+            width: 100%!important
+            .swiper-image
+                height: 47rem
+                width: auto
+                position: relative
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                .button-play 
+                    position: absolute
+                    top: 50% 
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                &:before 
+                    content: ''
+                    display: block
+                    position: absolute 
+                    width: 100%
+                    height: 100%
+                    background: rgba(0,0,0,.5)
+                    z-index: 9
+                .button-play
+                    z-index: 10
+        @media screen and(max-width:1200px)
+            .swiper-slide
+                .swiper-image
+                    padding: 0 1.5rem
+        @media screen and(max-width:767px)
+            .swiper-slide
+                .swiper-image
+                    height: 35rem
+        @media screen and(max-width:576px)
+            .swiper-slide
+                .swiper-image
+                    height: 30rem
+        @media screen and(max-width:450px)
+            .swiper-slide
+                .swiper-image
+                    height: 25rem
+        @media screen and(max-width:400px)
+            .swiper-slide
+                .swiper-image
+                    padding: 0
+                    height: 20rem
+    .services-thumbs-wrapper
+        margin: 2rem 0
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        .swiper-container
+            width: 80%
+        .swiper-slide
+            width: 9rem
+            .swiper-image
+                height: 8rem
+                width: auto
+                position: relative
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                .button-play 
+                    position: absolute
+                    display: none
+                    width: 4rem
+                    height: 4rem
+                    top: 50% 
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                    z-index: 10
+                    img
+                        width: 100%
+                        height: 100%
+            &.swiper-slide-thumb-active
+                position: relative
+                &:before 
+                    content: ''
+                    display: block
+                    position: absolute 
+                    width: 100%
+                    height: 100%
+                    background: rgba(0,0,0,.5)
+                    z-index: 9
+                .button-play
+                    display: block
+        .swiper-btn-next,.swiper-btn-prev
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 99
+            width: 4rem
+            height: 4rem
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #ffffff
+            border: 1px solid #ebebeb
+            outline: none
+            em 
+                color: #666666
+                font-size: 30px
+                transition: 2s
+            &:hover 
+                em 
+                    color: #0b9444
+        .swiper-btn-next
+            right: 0
+        .swiper-btn-prev
+            left: 0
+    .content 
+        overflow: auto
+        max-height: 85%
+        padding: 1.5rem
+        h3 
+            font-size: 2.4rem 
+            color: #333333
+            padding: 2rem 0
+            position: relative
+            &:after
+                content: ''
+                display: block
+                width: 100%
+                height: .1rem
+                background: #e1e1e1
+                position: absolute
+                left: 0
+    
+        p 
+            font-size: 1.6rem 
+            color: #333333
+            text-align: justify
+        &::-webkit-scrollbar
+            width: .4rem
+        &::-webkit-scrollbar-track
+            background: #eee
+        &::-webkit-scrollbar-thumb
+            background: #ac2021
+
