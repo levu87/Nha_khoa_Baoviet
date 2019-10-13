@@ -1,0 +1,110 @@
+.bang-gia 
+    padding: 5rem 0
+    .content 
+        font-size: 1.5rem 
+        color: #666666
+    .table-responsive 
+        white-space: nowrap
+        @media (max-width: 1200px)
+            overflow-x: auto
+        table 
+            width: 100%
+            margin-top: 3rem
+            border-collapse: collapse
+            border-radius: .5rem
+            overflow: hidden
+            thead
+                background: linear-gradient(to top, #229d44 0%, #81c044 100%)
+                tr 
+                    th
+                        border-top: none!important
+                        padding: 2rem 3rem
+                        text-align: center
+                        text-transform: uppercase
+                        color: #ffffff
+                        font-size: 1.6rem
+                        font-weight: bold
+                        
+                    .noidung
+                        width: 60%
+                        text-align: left
+            tbody 
+                tr 
+                    .cate 
+                        text-align: left
+                        color: #0b9444
+                        background: #eefbe6
+                        text-transform: uppercase
+                        font-weight: 700
+                    td 
+                        font-size: 1.6rem
+                        transition: all .4s ease-in-out
+                        padding: 2rem 3rem
+                        text-align: center
+                        border-bottom: 1px solid #e1e1e1
+                        a 
+                            border-bottom: 1px solid #333333
+                            transition: all .4s ease-in-out
+                            color: #333333
+                    .noidung 
+                        width: 60%
+                        text-align: left
+                        a
+                            border-bottom: none
+                    &:hover 
+                        box-shadow: 0 5px 10px -10px #333
+                        transition: all .4s ease-in-out
+                        .noidung 
+                            color: #ac2021
+                            a
+                                border-bottom: none
+                                color: #ac2021
+        @media screen and(max-width:768px)
+            .table
+                thead
+                    display: none
+                tbody
+                    tr
+                        border-bottom: 1px solid #e0e0e0!important
+                        position: relative
+                        padding: 1.6rem 0
+                        display: flex
+                        flex-wrap: wrap
+                        height: 100%
+                        border: none
+                        th
+                            flex: 0 0 100%
+                            text-align: left
+                                
+                            &:before
+                                font-size: 2.4rem
+                        td
+                            flex: 0 0 100%
+                            border: none
+                            padding: 0
+                            line-height: 2
+                            &:before
+                                content: attr(title) ": "
+                            &:nth-child(2)
+                                &:before
+                                    display: none
+                                position: absolute
+                                top: 2.5rem
+                                left: 5rem
+                                font-size: 1.8rem
+                                font-weight: 600
+                                text-transform: uppercase
+                                color: #ac2021
+                                white-space: pre-wrap
+                            &:not(:nth-child(1))
+                                text-align: left
+                        td:nth-child(1)
+                            text-align: left
+                            font-weight: 600
+                            font-size: 2.8rem
+                            padding-bottom: 2.5rem
+                            color: green
+                            &:before
+                                display: none
+                            &:before
+                                content: attr(title) ": "

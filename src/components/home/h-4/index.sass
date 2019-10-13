@@ -23,6 +23,10 @@
             margin-bottom: 2rem
             @media (max-width: 768px)
                 background-position-x: 50px!important
+            .col-6
+                @media (max-width: 768px)
+                    flex: 0 0 100%
+                    max-width: 100%
             .row
                 justify-content: flex-end
                 @media (max-width: 768px)
@@ -53,6 +57,12 @@
                     margin-top: 3rem
                     em 
                         margin-left: 1rem
+                        transition: all .4s ease-in-out
+                    &:hover 
+                        box-shadow: 0 5px 5px 0 rgba(0,0,0,.2)
+                        // em 
+                        //     margin-left: 1.5rem
+
         &--box2
             padding-left: 5rem
             @media (max-width: 768px)

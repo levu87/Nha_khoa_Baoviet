@@ -20,11 +20,39 @@
                 border-radius: 50%
                 justify-content: center
                 align-items: center
-                box-shadow: 0 0 0 0px #ed7d31
+              
+                // box-shadow: 0 0 0 0px #ed7d31
                 transition: .4s ease-in-out all
             // .LastPage, .NextPage, .BackPage, .FirstPage
                 // display: none
+            .LastPage,.FirstPage
+                display: none!important
+            .NextPage
+                font-size: 0
+                position: relative
+                &:before
+                    content: '\f054'
+                    font: normal normal normal 24px/1 Material Design Icons
+                    position: absolute
+                    top: 50%
+                    right: 0
+                    color: #ac2021
+                    font-size: 1.8rem
+                    transform: translateY(-50%)
+            .BackPage
+                font-size: 0
+                position: relative
+                &:before
+                    content: '\f04d'
+                    font: normal normal normal 24px/1 Material Design Icons
+                    position: absolute
+                    top: 50%
+                    left: 0
+                    color: #ac2021
+                    font-size: 1.8rem
+                    transform: translateY(-50%)
             &.active, &:hover
                 a, span
-                    color: #ed7d31
-                    box-shadow: 0 0 0 2px #ed7d31
+                    color: #ffffff
+                    // box-shadow: 0 0 0 2px #ed7d31
+                    background: #0b9444

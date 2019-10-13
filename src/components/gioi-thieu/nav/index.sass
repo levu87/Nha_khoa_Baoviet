@@ -1,0 +1,43 @@
+.about-us-display
+    .container
+    .about-us-nav
+        display: flex
+        align-items: center
+        @media screen and(max-width:1200px)
+            white-space: nowrap
+            overflow: auto
+            justify-content: flex-start
+        ul
+            list-style-type: none
+            padding: 0
+            margin: 0
+            li
+                padding: 1rem 0
+                display: inline-block
+                position: relative
+                &:after
+                    display: block
+                    content: ''
+                    width: 0
+                    height: .2rem 
+                    background: #ac2021
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    transition: all .3s ease-in-out
+                &:hover,&.active
+                    a
+                        color: #ac2021
+                        font-weight: 600
+                    &:after 
+                        width: 100%
+                a
+                    text-decoration: none
+                    font-size: 1.4rem
+                    color: #333333
+                    font-weight: 500
+                    line-height: 2.4rem
+                    text-transform: uppercase
+                    padding: 0 1.4rem
+                    transition: all .3s ease-in-out
+                

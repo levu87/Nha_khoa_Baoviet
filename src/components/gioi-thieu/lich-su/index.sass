@@ -1,0 +1,78 @@
+.history-section 
+    padding: 5rem 0
+    background: #ffffff
+    .tab-img 
+        // display: none 
+        // &.active
+        //     display: block
+        img
+            width: 100%
+    .tab-navigation
+        .swipeer-container 
+            position: relative
+        .swiper-slide
+            display: flex
+            flex-wrap: wrap
+            .date
+                flex: 0 0 100%
+                width: 100%
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 10rem
+                border-bottom: 4px solid #0b9444
+                margin-bottom: 10rem
+                &:after
+                    content: ''
+                    position: absolute
+                    z-index: 11
+                    bottom: -1rem
+                    width: 2rem
+                    height: 2rem 
+                    background: #10dc65 
+                    border-radius: 50%
+                    
+                h4 
+                    font-size: 2rem
+                    font-weight: 600
+                    color: #666666
+                    z-index: 11
+                    line-height: 1
+                    position: absolute
+                    bottom: 5rem
+                    transform: translateY(-50%)
+                &:hover,&.active 
+                    h4 
+                        color: #ac2021
+                    &:after 
+                        background: #ac2021
+        .history-btn-next,.history-btn-prev
+            position: absolute 
+            top: 15%
+            z-index: 99
+            outline: none
+            em 
+                font-size: 2.4rem 
+                color: #666666
+            &:hover 
+                em 
+                    color: #ac2021
+        .history-btn-next 
+            right: 0
+        .history-btn-prev
+            left: 0
+    .tab-content 
+        display: none 
+        h2 
+            text-align: center
+            font-size: 3rem 
+            padding-bottom: 2rem 
+            text-transform: uppercase
+            color: #ac2021
+        p 
+            font-size: 1.6rem 
+            color: #333333
+            text-align: justify
+        &.active 
+            display: block!important

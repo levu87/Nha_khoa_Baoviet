@@ -1,24 +1,19 @@
 .hoi-dap
+    padding: 5rem 0
     .modulepager .pagination
         margin-top: 3rem
         margin-bottom: 0
     .form-contact
         position: relative
-        padding: .8rem
-        background-position: unset!important
-        &::before
-            content: ''
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            background: url('/Data/Sites/1/media/khung.png')
-            background-repeat: repeat
+        background-image: url('../Data/Sites/1/media/img/khung.png')
+        .title 
+            color: #0b9444
+        
         .form-wrap
             padding: 3rem
-            background: #fff
             position: relative
+            textarea 
+                height: 6rem
         .main-title
             text-align: left
             font-size: 1.8rem
@@ -27,13 +22,14 @@
             width: 100%
             color: #0b9444
         .frm-btn
+            max-width: 15rem
             input
                 border: none
                 background: #0b9444
                 padding: .8rem 6rem
                 color: #fff
                 font-size: 1.6rem
-                width: 100%
+                // width: 100%
                 font-weight: 600
                 text-transform: uppercase
     .list-question
@@ -50,6 +46,7 @@
                 p
                     padding-left: 2rem
                     padding-top: 2rem
+                    font-weight: 500!important
                 &:before
                     font-family: 'Material Design Icons'
                     content: '\f140'
@@ -70,8 +67,10 @@
                             background: #0b9444
                     ul
                         li
-                            a
+                            padding-bottom: 1rem
+                            a,p
                                 color: #666666
+                                font-weight: 500!important
                     &:before
                         content: '\f143'
                     p

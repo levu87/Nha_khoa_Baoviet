@@ -84,7 +84,7 @@
                 color: #ffff
                 transition: .5s
                 &:hover 
-                    color: #ff8c00
+                    color: #ac2021
         .swiper-btn-next
             
             position: absolute
@@ -100,7 +100,12 @@
                 color: #ffff
                 transition: .5s
                 &:hover 
-                    color: #ff8c00
+                    color: #ac2021
         .swiper-btn-next,.swiper-btn-prev
+            opacity: 0
+            transition: all .2s ease-in-out
             @media (max-width: 480px)
                 display: none
+        &:hover 
+            .swiper-btn-next,.swiper-btn-prev
+                opacity: 1

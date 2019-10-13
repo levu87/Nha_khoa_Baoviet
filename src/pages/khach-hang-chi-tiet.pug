@@ -1,0 +1,14 @@
+
+extends _layout.pug
+
+block var
+	- var title = 'câu chuyện khách hàng'
+	- var bodyClass = 'cau-chuyen-khach-hang-page'
+
+block main
+	include ../components/hoi-dap/banner/index.pug
+	include ../components/hoi-dap/breadcrumb/index.pug
+	include ../components/khach-hang-chi-tiet/chi-tiet/index.pug
+	include ../components/khach-hang-chi-tiet/other/index.pug
+
+	

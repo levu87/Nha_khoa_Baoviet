@@ -1,0 +1,50 @@
+.about-section 
+    background: #f3faf5
+    .swiper-container 
+        position: relative
+    .swiper-slide
+        img 
+            width: 100%
+    .about-btn-next,.about-btn-prev
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 99
+        width: 4rem
+        height: 4rem
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #ffffff
+        border: 1px solid #ebebeb
+        outline: none
+        em 
+            color: #666666
+            font-size: 30px
+            transition: 2s
+        &:hover 
+            em 
+                color: #0b9444
+    .about-btn-next
+        right: 0
+    .about-btn-prev
+        left: 0
+    .content 
+        padding: 5rem 0
+        h3 
+            font-size: 2.4rem 
+            text-transform: capitalize
+            padding-bottom: 2rem
+        p 
+            font-size: 1.6rem
+            max-width: 60rem
+            text-align: justify
+    @media (max-width: 1025px)
+        .col-lg-6:nth-child(2)
+            flex: 0 0 100%
+            max-width: 100%
+            .content
+                text-align: center 
+                padding: 2rem
+                p 
+                    max-width: unset

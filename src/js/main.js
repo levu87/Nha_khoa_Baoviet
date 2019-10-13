@@ -59,8 +59,8 @@ const Header = {
         });
         $('.back-drop').on('click', function () {
             $('.searchbutton').removeClass('active')
-            $('.back-drop').removeClass('active')
             $('.searchbox').removeClass('active')
+            $('.back-drop').removeClass('active')
         });
     },
     SearchBoxMobile: () => {
@@ -217,39 +217,120 @@ function swiperInit() {
     }
     },
     });
-      
+    var swiper = new Swiper('.about-section .swiper-container', {
+        slidesPerView: 1,
+        navigation: {
+        nextEl: '.about-btn-next',
+        prevEl: '.about-btn-prev',
+        },
+        });
+    var swiper = new Swiper('.tab-navigation .swiper-container', {
+        // autoplay: {
+        //     delay: 4500
+        // },
+        slidesPerView: 4,
+        loop: false,
+        speed: 1000,
+        navigation: {
+            prevEl: '.history-btn-prev',
+            nextEl: '.history-btn-next',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            }
+        }
+    });
+    var swiper = new Swiper('.prize-section .swiper-container', {
+        autoplay: {
+            delay: 4500
+        },
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: false,
+        speed: 1000,
+        navigation: {
+            prevEl: '.prize-btn-prev',
+            nextEl: '.prize-btn-next',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            }
+        }
+    });
+    var swiper = new Swiper('.partners-section .swiper-container', {
+        autoplay: {
+            delay: 4500
+        },
+        slidesPerView: 6,
+        spaceBetween: 30,
+        slidesPerColumn: 2,
+        loop: false,
+        speed: 1000,
+        navigation: {
+            prevEl: '.partners-btn-prev',
+            nextEl: '.partners-btn-next',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            }
+        }
+    });
+    var galleryThumbs = new Swiper(
+		".may-moc-thumbs-wrapper .swiper-container",
+		{
+			spaceBetween: 20,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true
+		}
+	);
+	var galleryTop = new Swiper(".may-moc-top-wrapper .swiper-container", {
+		spaceBetween: 10,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		thumbs: {
+			swiper: galleryThumbs,
+			slidesPerView: 4
+        },
+        navigation: {
+            nextEl: '.swiper-btn-next',
+            prevEl: '.swiper-btn-prev',
+        },
+    });
 }
-
-// function ChangeColorSvg() {
-//     jQuery('img.svg').each(function(){
-//         var $img = jQuery(this);
-//         var imgID = $img.attr('id');
-//         var imgClass = $img.attr('class');
-//         var imgURL = $img.attr('src');
-
-//         jQuery.get(imgURL, function(data) {
-//             // Get the SVG tag, ignore the rest
-//             var $svg = jQuery(data).find('svg');
-
-//             // Add replaced image's ID to the new SVG
-//             if(typeof imgID !== 'undefined') {
-//                 $svg = $svg.attr('id', imgID);
-//             }
-//             // Add replaced image's classes to the new SVG
-//             if(typeof imgClass !== 'undefined') {
-//                 $svg = $svg.attr('class', imgClass+' replaced-svg');
-//             }
-
-//             // Remove any invalid XML tags as per http://validator.w3.org
-//             $svg = $svg.removeAttr('xmlns:a');
-
-//             // Replace image with new SVG
-//             $img.replaceWith($svg);
-
-//         }, 'xml');
-
-//     });
-// }
 function Accordion() {
 
     $(".list-question ul .accordion-title p").click(function(e) {
@@ -274,6 +355,70 @@ function Accordion() {
         }
     });
 }
+function sticky(){
+    if ($("body").hasClass("about-us")) {
+		let offset = 80;
+		let scrollToSection = $('.about-us-nav ul li a[href*="#"]');
+		scrollToSection.on("click", function(e) {
+			$("html, body").animate(
+				{
+					scrollTop: $($(this).attr("href")).offset().top - offset
+				},
+				600,
+				"linear"
+			);
+		});
+	}
+}
+// function scroll(){
+//     $(".about-us-nav ul li a[href^='#']").click(function(e) {
+//         e.preventDefault();
+        
+//         var position = $($(this).attr("href")).offset().top;
+    
+//         $("body, html").animate({
+//             scrollTop: position
+//         } /* speed */ );
+//     });
+// }
+function tabActive() {
+	$('.tab-navigation a').click(function () {
+		var tab_id = $(this).attr('data-type');
+		$('.tab-navigation a').removeClass('active');
+		$('.tab-content').removeClass('active');
+        $('.tab-img').removeClass('active');
+		$(this).addClass('active');
+		$("#" + tab_id).addClass('active');
+	})
+}
+function form(){
+	$('.button-ungtuyen').on('click', function() {
+        $('.form-apply').toggleClass('active')
+        $('.back-drop').toggleClass('active')
+    });
+    $('.back-drop').on('click', function () {
+        $('.form-apply').removeClass('active')
+        $('.back-drop').removeClass('active')
+    });
+    $('.button-out').on('click', function () {
+        $('.form-apply').removeClass('active')
+        $('.back-drop').removeClass('active')
+    });
+}
+function ButtonPrint(){
+	$('a.fax').on('click', function(){
+	window.print()
+	})
+    }
+    function mobileListItem() {
+        $('.has-dropdown').on('click', function () {
+            if ($(this).find('ul').is(':hidden')) {
+                $(this).find('ul').slideDown()
+            } else {
+                $(this).find('ul').slideUp()
+            }
+        });
+    }
 $(document).ready(function () {
     swiperInit();
     App.SetBackground()
@@ -287,5 +432,10 @@ $(document).ready(function () {
     headerfixed()
     toggleHeader()
     Accordion()
-    // ChangeColorSvg()
+    sticky()
+    tabActive()
+    form()
+    // scroll()
+    ButtonPrint()
+    mobileListItem()
 })
